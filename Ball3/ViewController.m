@@ -24,6 +24,7 @@
     self.predictionArray = [[NSArray alloc] initWithObjects:@"ACTION",@"BOOM",@"EXPLOSION",@"GIRL POWER",@"#aufschrei",@"CHUCK NORRIS",@"RUMBLE", nil];
     
     self.predictionLabel.layer.cornerRadius = 150;
+    
     gradient = [CAGradientLayer layer];
     gradient.frame = self.view.bounds;
     gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor],(id)[[UIColor grayColor] CGColor], nil];
@@ -52,8 +53,7 @@
     
     red = arc4random_uniform(100)/100.0;
     green = arc4random_uniform(100)/100.0;
-    blue = arc4random_uniform(100)/100.0;
-    
+    blue = arc4random_uniform(100)/100.0;    
     gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:red green:green blue:blue alpha:1.0] CGColor],(id)[[UIColor grayColor] CGColor], nil];
     
     
