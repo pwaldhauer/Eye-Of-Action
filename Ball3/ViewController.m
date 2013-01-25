@@ -54,7 +54,9 @@
     red = arc4random_uniform(100)/100.0;
     green = arc4random_uniform(100)/100.0;
     blue = arc4random_uniform(100)/100.0;    
-    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:red green:green blue:blue alpha:1.0] CGColor],(id)[[UIColor grayColor] CGColor], nil];
+    gradient.colors = [NSArray arrayWithObjects:
+                       (id)[[UIColor colorWithWhite: 1.0 alpha:1.0] CGColor],
+                       (id)[[UIColor colorWithRed:red green:green blue:blue alpha:1.0] CGColor], nil];
     
     
     
