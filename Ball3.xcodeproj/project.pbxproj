@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8F3E348216B43D4E001C44AE /* Transform.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8F3E348116B43D4E001C44AE /* Transform.wav */; };
+		8F3E348716B4415C001C44AE /* breathing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8F3E348616B4415C001C44AE /* breathing.wav */; };
+		8F3E348A16B449EF001C44AE /* brueste01.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3E348816B449EF001C44AE /* brueste01.png */; };
+		8F3E348B16B449EF001C44AE /* brueste02.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3E348916B449EF001C44AE /* brueste02.png */; };
+		8F3E348D16B44A33001C44AE /* ball3_icon_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3E348C16B44A33001C44AE /* ball3_icon_02.png */; };
 		8F7BB46B16B1D996005745CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BB46A16B1D996005745CA /* UIKit.framework */; };
 		8F7BB46D16B1D996005745CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BB46C16B1D996005745CA /* Foundation.framework */; };
 		8F7BB46F16B1D996005745CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BB46E16B1D996005745CA /* CoreGraphics.framework */; };
@@ -36,6 +40,10 @@
 
 /* Begin PBXFileReference section */
 		8F3E348116B43D4E001C44AE /* Transform.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Transform.wav; sourceTree = "<group>"; };
+		8F3E348616B4415C001C44AE /* breathing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = breathing.wav; sourceTree = "<group>"; };
+		8F3E348816B449EF001C44AE /* brueste01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brueste01.png; sourceTree = "<group>"; };
+		8F3E348916B449EF001C44AE /* brueste02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brueste02.png; sourceTree = "<group>"; };
+		8F3E348C16B44A33001C44AE /* ball3_icon_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball3_icon_02.png; sourceTree = "<group>"; };
 		8F7BB46616B1D996005745CA /* Ball3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ball3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7BB46A16B1D996005745CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8F7BB46C16B1D996005745CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,6 +149,10 @@
 		8F7BB49516B3F7C3005745CA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8F3E348C16B44A33001C44AE /* ball3_icon_02.png */,
+				8F3E348816B449EF001C44AE /* brueste01.png */,
+				8F3E348916B449EF001C44AE /* brueste02.png */,
+				8F3E348616B4415C001C44AE /* breathing.wav */,
 				8F3E348116B43D4E001C44AE /* Transform.wav */,
 				8F7BB4B316B437BD005745CA /* button02.png */,
 				8F7BB4AF16B43722005745CA /* button01.png */,
@@ -227,6 +239,10 @@
 				8F7BB4B216B43722005745CA /* doh02.png in Resources */,
 				8F7BB4B416B437BD005745CA /* button02.png in Resources */,
 				8F3E348216B43D4E001C44AE /* Transform.wav in Resources */,
+				8F3E348716B4415C001C44AE /* breathing.wav in Resources */,
+				8F3E348A16B449EF001C44AE /* brueste01.png in Resources */,
+				8F3E348B16B449EF001C44AE /* brueste02.png in Resources */,
+				8F3E348D16B44A33001C44AE /* ball3_icon_02.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

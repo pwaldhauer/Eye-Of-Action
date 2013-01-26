@@ -24,6 +24,15 @@
     [super viewDidLoad];
    
     
+    SystemSoundID sounds[10];
+    //Path for our sound:
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"breathing" ofType:@"wav"];
+    CFURLRef soundURL = (__bridge CFURLRef)[NSURL fileURLWithPath:soundPath];
+    AudioServicesCreateSystemSoundID(soundURL, &sounds[0]);
+    
+    AudioServicesPlaySystemSound(sounds[0]);
+    
+    
     
     self.predictionArray = [[NSArray alloc] initWithObjects:
                             @"ACTION",
@@ -46,9 +55,17 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed: [self.randomCat objectAtIndex:curiousCat]]];
 
 
-    UIImage *bildBrueste = [UIImage imageNamed:@"ball3_icon.png"];
-    UIImageView *bildBruesteContainer = [[UIImageView alloc] initWithImage:bildBrueste];
-    [self.view insertSubview:bildBruesteContainer atIndex:30];
+    UIImage *bildBrueste = [UIImage imageNamed:@"ball3_icon_02.png"];
+    self.bildBruesteContainer = [[UIImageView alloc] initWithImage:bildBrueste];
+    [self.view insertSubview:self.bildBruesteContainer atIndex:30];
+    
+    self.bildBruesteContainer.animationImages = [[NSArray alloc] initWithObjects:
+                                                 [UIImage imageNamed:@"ball3_icon"],
+                                                 [UIImage imageNamed:@"ball3_icon_02"], nil];
+    self.bildBruesteContainer.animationDuration = 1.0;
+    self.bildBruesteContainer.animationRepeatCount = 8;
+    [self.bildBruesteContainer startAnimating];
+    
     
     
 
@@ -84,11 +101,43 @@
     CGFloat blue = arc4random_uniform(100)/100.0;
     self.predictionLabel.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     self.predictionLabel.textColor = [UIColor whiteColor];
-    
-    
-    
-
-    
-    
 }
+
+- (BOOL) canBecomeFirstResponder {
+    return YES;
+}
+
+- (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    self.predictionLabel.text = nil;
+}
+
+- (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if (motion == UIEventSubtypeMotionShake){
+        NSUInteger zufallsText = arc4random_uniform(self.predictionArray.count);
+        self.predictionLabel.text = [self.predictionArray objectAtIndex: zufallsText];
+        
+        CGFloat red = arc4random_uniform(100)/100.0;
+        CGFloat green = arc4random_uniform(100)/100.0;
+        CGFloat blue = arc4random_uniform(100)/100.0;
+        self.predictionLabel.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+        self.predictionLabel.textColor = [UIColor whiteColor];
+        
+        NSUInteger curiousCat = arc4random_uniform(self.randomCat.count);
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed: [self.randomCat objectAtIndex:curiousCat]]];
+        
+        SystemSoundID sounds[10];
+        //Path for our sound:
+        NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"Transform" ofType:@"wav"];
+        CFURLRef soundURL = (__bridge CFURLRef)[NSURL fileURLWithPath:soundPath];
+        AudioServicesCreateSystemSoundID(soundURL, &sounds[0]);
+        
+        AudioServicesPlaySystemSound(sounds[0]);
+    }
+}
+
+- (void) motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    NSLog(@"Motion cancelled");
+}
+
+
 @end
