@@ -13,9 +13,10 @@
 - (IBAction)buttonPressed:(UIButton *)sender;
 
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
+@property (strong, nonatomic) IBOutlet UISwitch *uselessSwitch;
 @property (strong, nonatomic) NSArray *predictionArray;
-
-
+@property (strong, nonatomic) NSArray *randomCat;
+@property (strong, nonatomic) UIImageView *bildBruesteContainer;
 
 
 @end
